@@ -1,0 +1,22 @@
+<h1>My Profile ({{name}})</h1>
+<h2>Add a project</h2>
+<form action="" id="add-proj-form">
+  <label for="proj-name">Name</label>
+  <input type="text" id="proj-name" />
+  <label for="proj-funding">Amount needed</label>
+  <input type="text" id="proj-funding" />
+  <label for="proj-desc">Description</label>
+  <textarea type="text" id="proj-desc"></textarea>
+  <button>Add Project</button>
+</form>
+<h2>My projects </h2>
+{{#each Projects}}
+  <div class="card">
+    <h3>{{name}}</h3>
+    <h3>Needed Funding: {{neededFunding}}</h3>
+    <p>{{description}}</p>
+    <button class="del-btn" data-id="{{id}}">Delete</button>
+  </div>
+{{/each}}
+
+<script src="/js/profile.js"></script>
